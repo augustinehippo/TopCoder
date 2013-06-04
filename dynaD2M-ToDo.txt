@@ -1,0 +1,5 @@
+To Do in dynamic programming:
+
+handshaking srm 363
+norepeatplaylist srm 531
+evenroute srm 538

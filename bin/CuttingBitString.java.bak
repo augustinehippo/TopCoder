@@ -1,27 +1,35 @@
-public class Test{
+import java.util.*;
+public class CuttingBitString {
+    public int getmin(String S) {
+        
+        return ;
+    }
+
 // BEGIN CUT HERE
     public static void main(String[] args) {
         try {
-            eq1(0,(new PillarsDivTwo()).maximalLength(new int[] {3,3,3}, 2),5.656854249492381);
-            eq1(1,(new PillarsDivTwo()).maximalLength(new int[] {1,1,1,1}, 100),300.0);
-            eq1(2,(new PillarsDivTwo()).maximalLength(new int[] {100,2,100,2,100}, 4),396.32310051270036);
-            eq1(3,(new PillarsDivTwo()).maximalLength(new int[] {2,1,1,2}, 1),3.82842712474619);
+            eq(0,(new CuttingBitString()).getmin("101101101"),3);
+            eq(1,(new CuttingBitString()).getmin("1111101"),1);
+            eq(2,(new CuttingBitString()).getmin("00000"),-1);
+            eq(3,(new CuttingBitString()).getmin("110011011"),3);
+            eq(4,(new CuttingBitString()).getmin("1000101011"),-1);
+            eq(5,(new CuttingBitString()).getmin("111011100110101100101110111"),5);
         } catch( Exception exx) {
             System.err.println(exx);
             exx.printStackTrace(System.err);
         }
     }
-    private static void eq1( int n, double d, double e ) {
-        if ( d==e )
+    private static void eq( int n, int a, int b ) {
+        if ( a==b )
             System.err.println("Case "+n+" passed.");
         else
-            System.err.println("Case "+n+" failed: expected "+e+", received "+d+".");
+            System.err.println("Case "+n+" failed: expected "+b+", received "+a+".");
     }
-    private static void eq( int n, double d, double e ) {
-        if ( d==e )
+    private static void eq( int n, char a, char b ) {
+        if ( a==b )
             System.err.println("Case "+n+" passed.");
         else
-            System.err.println("Case "+n+" failed: expected '"+e+"', received '"+d+"'.");
+            System.err.println("Case "+n+" failed: expected '"+b+"', received '"+a+"'.");
     }
     private static void eq( int n, long a, long b ) {
         if ( a==b )
